@@ -1,0 +1,150 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body.dark-theme {
+  --background: #242933;
+  --surface: #2e3440;
+  --accent: #88c0d0;
+  --text: #eceff4;
+}
+
+body.light-theme {
+  --background: #e5e9f0;
+  --surface: #d8dee9;
+  --accent: #88c0d0;
+  --text: #4c566a;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter.ttf);
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url(../fonts/Rubik-Medium.ttf);
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  fill: var(--text);
+}
+
+main {
+  max-width: 53rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  background-color: var(--surface);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  font-size: 17px;
+}
+
+button:hover {
+  color: var(--accent);
+  fill: var(--accent);
+}
+
+/* Navbar */
+
+nav {
+  background-color: var(--surface);
+  display: flex;
+  justify-content: center;
+}
+
+nav .center {
+  padding: 1rem;
+  max-width: 55rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+nav .title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+nav .title h4 {
+    font-style: normal;
+}
+
+nav .end svg {
+  fill: var(--text);
+  padding: 10px;
+}
+
+nav .end svg:hover {
+  fill: var(--accent);
+  padding: 10px;
+}
+
+nav .surround {
+  display: inline-block;
+}
+
+nav .surround svg {
+  fill: var(--accent);
+}
+
+nav .surround svg:hover {
+  fill: var(--text);
+}
+
+nav .end {
+  display: inline;
+}
+
+nav .start {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  fill: var(--text);
+  gap: 10px;
+  min-width: 4rem;
+}
+
+nav .start:hover {
+  color: var(--accent);
+  fill: var(--accent);
+}
+
+@media (max-width: 500px) {
+  nav h4 {
+    display: none;
+  }
+
+  nav p {
+    display: none;
+  }
+}
